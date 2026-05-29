@@ -1,0 +1,15 @@
+[Unit]
+Description=Tsunami Crypto Intelligence API (x402)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/x402-crypto-api
+ExecStart=/home/ubuntu/x402-crypto-api/venv/bin/python main.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
